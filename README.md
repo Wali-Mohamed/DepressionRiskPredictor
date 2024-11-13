@@ -1,6 +1,6 @@
 # Depression Risk Prediction Project
 
-![Alt text](/images/depressionimage.jpeg)
+![Alt text](./images/depressionimage.jpeg)
 
 ## Problem Statement
 
