@@ -10,6 +10,8 @@ scikit-learn = "*"
 pandas = "*"
 seaborn = "*"
 tqdm = "*"
+hyperopt = "*"
+xgboost = "*"
 
 [dev-packages]
 
