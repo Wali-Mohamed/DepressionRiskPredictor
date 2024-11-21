@@ -47,16 +47,17 @@ This methodical approach to managing missing data ensured the dataset's robustne
 
 
 
-### Justification for Using Recall and AUC in Depression Risk Prediction Model
+### Summary: Metric Selection in Depression Risk Prediction
 
-In the development of our model to predict the risk of depression from survey data, prioritizing Recall and AUC as key metrics is essential due to the specific characteristics and objectives of this project:
+In developing our depression risk prediction model, we prioritize key metrics to align with medical field demands:
 
-- **Recall:**
-  - **Critical for Minimizing False Negatives:** Essential in medical and psychological fields where failing to identify at-risk individuals can result in significant consequences.
-  - **Addresses Class Imbalance:** Ensures that the model effectively identifies the minority class (those at risk), which is vital given the 20% prevalence of at-risk individuals in the dataset.
+- **Recall:** Chosen as the primary metric due to its critical role in minimizing false negatives and addressing class imbalance with the 20% at-risk prevalence. Essential for preventing severe consequences by identifying at-risk individuals.
+- **AUC (Area Under the ROC Curve):** Evaluates the model’s discriminative ability across decision thresholds and aids in model comparison.
 
-- **AUC (Area Under the ROC Curve):**
-  - **Comprehensive Performance Measurement:** Evaluates the model's ability to distinguish between at-risk and not-at-risk individuals across all possible decision thresholds, providing a robust measure of its discriminative power.
-  - **Facilitates Model Comparison:** Useful in comparing different models to determine which performs best at identifying depression risk, irrespective of the classification threshold.
+Secondary metrics like **accuracy, precision,** and **F1 Score** are less emphasized:
+- **Accuracy** is less relevant due to data imbalance.
+- **Precision** and **F1 Score** help balance recall but are secondary to ensuring all potential cases are captured.
 
-In the context of our project, which operates within the medical field and involves predicting the risk of depression, we will prioritize focusing on **Recall** as our primary performance metric. This decision is based on the critical importance of minimizing false negatives in healthcare applications, where failing to identify individuals at risk of depression could have serious consequences. Ensuring a high Recall means that our model will identify as many at-risk individuals as possible, which is paramount for providing timely and effective interventions. This approach aligns with the ethical standards and practical necessities of medical predictive analytics, where the emphasis is on safeguarding against overlooked diagnoses.
+### Conclusion:
+**Recall** is paramount in our model to ensure no at-risk individual is missed, aligning with the high stakes of medical diagnostics and ethical standards of healthcare analytics.
+
