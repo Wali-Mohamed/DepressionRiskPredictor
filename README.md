@@ -21,3 +21,42 @@ The goal of this project is to build a machine learning model that predicts the 
 
 This project is intended for researchers and practitioners in mental health, data science communities interested in the applications of machine learning in public health, and potentially for policymakers looking to understand more about population health management.
 
+## Handling Missing Values: A Structured and Tailored Approach
+
+Upon detailed analysis, distinct patterns of missing values were identified in the dataset, correlating strongly with the participants' categories—students and working professionals. This categorization guided the data cleaning and preparation process:
+
+### Pattern Identification:
+- **Fields Not Applicable to Professionals:** 'Study Satisfaction', 'Academic Pressure', and 'CGPA' were predominantly missing for working professionals, indicating non-applicability to this group.
+- **Fields Irrelevant for Students:** Conversely, 'Profession', 'Work Pressure', and 'Job Satisfaction' showed significant missingness among students, marking these fields as irrelevant for this subgroup.
+
+### Targeted Data Imputation Strategies:
+- **For Students:**
+  - Entries not applicable to students, such as professional features, were imputed with "Not Applicable", accurately reflecting the data's irrelevance for this subgroup.
+- **For Working Professionals:**
+  - Missing data in 'Profession', where essential, was imputed with the mode value of this variable among working professionals, ensuring consistency and filling gaps with the most frequently observed category.
+  
+### Specific Imputation Methods Chosen:
+- **Numerical Data:**
+  - Numerical fields where data was not applicable (e.g., 'CGPA' for professionals) were set to `-1`, marking them distinctly as non-applicable.
+  - Applicable numerical values missing among students were imputed using the median of the respective fields to maintain a balanced data distribution.
+- **Categorical Data:**
+  - "Not Applicable" was used for fields irrelevant to certain groups, maintaining clear differentiation.
+  - For applicable categorical data among professionals, missing entries were filled using the mode, preserving characteristic consistency within the group.
+
+This methodical approach to managing missing data ensured the dataset's robustness and representativeness, enhancing the accuracy of analyses and modeling. By recognizing the structured absence of data due to distinct participant groups and applying context-specific imputation methods, the integrity and reliability of the subsequent analytical procedures were upheld. Such rigor in the methodological approach is essential to avoid misinterpretation and ensure the validity and applicability of the findings to the respective groups within the dataset.
+
+
+
+### Justification for Using Recall and AUC in Depression Risk Prediction Model
+
+In the development of our model to predict the risk of depression from survey data, prioritizing Recall and AUC as key metrics is essential due to the specific characteristics and objectives of this project:
+
+- **Recall:**
+  - **Critical for Minimizing False Negatives:** Essential in medical and psychological fields where failing to identify at-risk individuals can result in significant consequences.
+  - **Addresses Class Imbalance:** Ensures that the model effectively identifies the minority class (those at risk), which is vital given the 20% prevalence of at-risk individuals in the dataset.
+
+- **AUC (Area Under the ROC Curve):**
+  - **Comprehensive Performance Measurement:** Evaluates the model's ability to distinguish between at-risk and not-at-risk individuals across all possible decision thresholds, providing a robust measure of its discriminative power.
+  - **Facilitates Model Comparison:** Useful in comparing different models to determine which performs best at identifying depression risk, irrespective of the classification threshold.
+
+This focus on Recall and AUC ensures that the model not only identifies as many true at-risk individuals as possible but also maintains a high level of discrimination between those who are at risk and those who are not. These metrics are therefore crucial for developing a reliable and effective tool for early identification and intervention in the context of depression risk.
