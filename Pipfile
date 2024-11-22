@@ -5,13 +5,13 @@ name = "pypi"
 
 [packages]
 jupyter = "*"
-flask = "*"
 scikit-learn = "*"
 pandas = "*"
 seaborn = "*"
 tqdm = "*"
-hyperopt = "*"
 xgboost = "*"
+flask = "*"
+squarify = "*"
 
 [dev-packages]
 

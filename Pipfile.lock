@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a28ed6cf0a08054d045256402585c83e318ae698825cd290c3dc5524a94ffc99"
+            "sha256": "a860844cd115cb6b530b393b1659482c8680f9f4d418fcf850a78c081260f66c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -322,14 +322,6 @@
             "markers": "python_version >= '3.7'",
             "version": "==8.1.7"
         },
-        "cloudpickle": {
-            "hashes": [
-                "sha256:81a929b6e3c7335c863c771d673d105f02efdb89dfaba0c90495d1c64796601b",
-                "sha256:fe11acda67f61aaaec473e3afe030feb131d78a43461b718185363384f1ba12e"
-            ],
-            "markers": "python_version >= '3.8'",
-            "version": "==3.1.0"
-        },
         "colorama": {
             "hashes": [
                 "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44",
@@ -479,12 +471,12 @@
         },
         "flask": {
             "hashes": [
-                "sha256:34e815dfaa43340d1d15a5c3a02b8476004037eb4840b34910c6e21679d288f3",
-                "sha256:ceb27b0af3823ea2737928a4d99d125a06175b8512c445cbd9a9ce200ef76842"
+                "sha256:5f873c5184c897c8d9d1b05df1e3d01b14910ce69607a117bd3277098a5836ac",
+                "sha256:d667207822eb83f1c4b50949b1623c8fc8d51f2341d65f72e1a1815397551136"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==3.0.3"
+            "markers": "python_version >= '3.9'",
+            "version": "==3.1.0"
         },
         "fonttools": {
             "hashes": [
@@ -548,14 +540,6 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.5.1"
         },
-        "future": {
-            "hashes": [
-                "sha256:929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216",
-                "sha256:bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
-            ],
-            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2'",
-            "version": "==1.0.0"
-        },
         "h11": {
             "hashes": [
                 "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d",
@@ -579,14 +563,6 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.27.2"
-        },
-        "hyperopt": {
-            "hashes": [
-                "sha256:1bf89ae58050bbd32c7307199046117feee245c2fd9ab6255c7308522b7ca149",
-                "sha256:f3046d91fe4167dbf104365016596856b2524a609d22f047a066fc1ac796427c"
-            ],
-            "index": "pypi",
-            "version": "==0.2.7"
         },
         "idna": {
             "hashes": [
@@ -1072,14 +1048,6 @@
             "markers": "python_version >= '3.5'",
             "version": "==1.6.0"
         },
-        "networkx": {
-            "hashes": [
-                "sha256:307c3669428c5362aab27c8a1260aa8f47c4e91d3891f48be0141738d8d053e1",
-                "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f"
-            ],
-            "markers": "python_version >= '3.10'",
-            "version": "==3.4.2"
-        },
         "notebook": {
             "hashes": [
                 "sha256:2ef07d4220421623ad3fe88118d687bc0450055570cdd160814a59cf3a1c516e",
@@ -1372,13 +1340,6 @@
                 "sha256:5f4e983f40564c576c7c8635ae88db5956bb2229d7e9237d03b3c0b0190eaf42"
             ],
             "version": "==0.2.3"
-        },
-        "py4j": {
-            "hashes": [
-                "sha256:0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb",
-                "sha256:85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"
-            ],
-            "version": "==0.10.9.7"
         },
         "pycparser": {
             "hashes": [
@@ -1885,6 +1846,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==2.6"
+        },
+        "squarify": {
+            "hashes": [
+                "sha256:b8a110c8dc5f1cd1402ca12d79764a081e90bfc445346cfa166df929753ecb46",
+                "sha256:d7597724e29d48aa14fd2f551060d6b09e1f0a67e4cd3ea329fe03b4c9a56f11"
+            ],
+            "index": "pypi",
+            "version": "==0.4.4"
         },
         "stack-data": {
             "hashes": [
