@@ -38,7 +38,36 @@ cd depression_predictor
 python app.py
 curl http://localhost:9696/predict
 ```
+* Web Service
 
+```
+Start service:  python predict_wine.py
+In jupyter notebook, issue following statements:
+
+	- import requests
+	- url = 'http://localhost:9696/predict'
+	- person ={
+    "age": 6.0,
+    "academic-pressure": -1,
+    "work-pressure": 5,
+    "cgpa": -1,
+    "study-satisfaction": -1,
+    "job-satisfaction": 1,
+    "work-study-hours": 15.0,
+    "financial-stress": 5.0,
+    "gender": "male",
+    "city": "pune",
+    "working-professional-or-student": "working professional",
+    "profession": "teacher",
+    "sleep-duration": "less than 5 hours",
+    "dietary-habits": "unhealthy",
+    "degree": "b.tech",
+    "have-you-ever-had-suicidal-thoughts-?": "no",
+    "family-history-of-mental-illness": "yes"
+}
+	- requests.post(url, json=person).json()
+
+```
 On command line
 
 ```bash
