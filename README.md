@@ -21,6 +21,41 @@ The goal of this project is to build a machine learning model that predicts the 
 
 This project is intended for researchers and practitioners in mental health, data science communities interested in the applications of machine learning in public health, and potentially for policymakers looking to understand more about population health management.
 
+# How to Run Application
+
+### Build and Run the Application Using Docker
+```bash
+docker build -t depression_app .
+docker run -it --rm -p 8080:8080 depression_app
+```
+
+Then, Use test.py as input to the service
+
+Run locally
+
+```bash
+cd depression_predictor
+python app.py
+curl http://localhost:9696/predict
+```
+Web Service
+
+```
+Start service:  python predict_wine.py
+In jupyter notebook, issue following statements:
+
+	- import requests
+	- url = 'http://localhost:9696/predict'
+	- wine = {"alcohol": 20.5, "sulphates": 0.74, "citric acid": 0.66, "volatile acidity": 0.04}
+	- requests.post(url, json=wine).json()
+```
+
+
+
+
+
+
+
 ## Handling Missing Values: A Structured and Tailored Approach
 
 Upon detailed analysis, distinct patterns of missing values were identified in the dataset, correlating strongly with the participants' categories—students and working professionals. This categorization guided the data cleaning and preparation process:
