@@ -94,7 +94,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 
 ### On cloud
-
+The app has been deployed on **AWS EC2**
 [Depression Risk Predictor](http://3.10.221.130:5000)
 
 
