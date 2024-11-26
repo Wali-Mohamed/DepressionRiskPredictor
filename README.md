@@ -98,6 +98,23 @@ curl -X POST -H "Content-Type: application/json" -d '{
 [Depression Risk Predictor](http://3.10.221.130:5000)
 
 
+## Project File Structure
+
+parent_directory/
+├── data/
+│   ├── train.csv
+│   ├── final_depression_dataset_1.csv
+├── depression_predictor/
+│   ├── app.py
+│   ├── best_xgboost.bin
+│   ├── static/
+│   ├── templates/
+├── notebook.ipynb
+├── train.py
+└── predict.py
+
+
+
 
 
 
