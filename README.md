@@ -31,10 +31,25 @@ docker run -it --rm -p 5000:9696 depression_app
 
 Then, Use test.py as input to the service
 
-Run locally
+## Run locally
 ```bash
-git clone <repo>
+git clone https://github.com/Wali-Mohamed/DepressionRiskPredictor.git
+cd depression_predictor
+pip install pipenv
+```
+### Install Dependencies
 
+```bash
+pipenv install
+```
+### Activate virtual environment
+```bash
+pipenv shell
+```
+### Deactivate the environment
+```bash
+exit
+```
 ```bash
 cd depression_predictor
 python app.py
