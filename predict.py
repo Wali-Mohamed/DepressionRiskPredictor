@@ -8,23 +8,23 @@ with open('./depression_predictor/best_xgboost.bin', 'rb') as file:
 
 # Make predictions using the loaded model
 
-person ={'age': 60.0,
+person ={'age': 25.0,
          'academic-pressure': 5,
          'work-pressure': 5.0,
          'cgpa':-1,
          'study-satisfaction': -1,
-         'job-satisfaction': 0.0,
+         'job-satisfaction': 5.0,
          'work-study-hours': 15.0,
-         'financial-stress': 5.0,
+         'financial-stress': 3.0,
          'gender': 'male',
          'city': 'pune',
-         'working-professional-or-student': 'student',
-         'profession': 'teacher',
+         'working-professional-or-student': 'working professional',
+         'profession': 'designer',
          'sleep-duration': 'less than 5 hours',
-         'dietary-habits': 'unhealthy',
+         'dietary-habits': 'healthy',
          'degree': 'b.tech',
-         'have-you-ever-had-suicidal-thoughts-?': 'yes',
-         'family-history-of-mental-illness': 'yes'}
+         'have-you-ever-had-suicidal-thoughts-?': 'no',
+         'family-history-of-mental-illness': 'no'}
 
 X= dv.transform(person)
 features = list(dv.get_feature_names_out())
