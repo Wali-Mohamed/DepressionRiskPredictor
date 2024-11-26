@@ -26,7 +26,7 @@ This project is intended for researchers and practitioners in mental health, dat
 ### Build and Run the Application Using Docker
 ```bash
 docker build -t depression_app .
-docker run -it --rm -p 8080:8080 depression_app
+docker run -it --rm -p 5000:9696 depression_app
 ```
 
 Then, Use test.py as input to the service
@@ -46,8 +46,48 @@ In jupyter notebook, issue following statements:
 
 	- import requests
 	- url = 'http://localhost:9696/predict'
-	- wine = {"alcohol": 20.5, "sulphates": 0.74, "citric acid": 0.66, "volatile acidity": 0.04}
-	- requests.post(url, json=wine).json()
+	- person ={'age': 60.0,
+         'academic-pressure': 5,
+         'work-pressure': -1,
+         'cgpa':5,
+         'study-satisfaction': 5,
+         'job-satisfaction': -1,
+         'work-study-hours': 15.0,
+         'financial-stress': 5.0,
+         'gender': 'male',
+         'city': 'pune',
+         'working-professional-or-student': 'student',
+         'profession': 'not-applicable',
+         'sleep-duration': 'less than 5 hours',
+         'dietary-habits': 'unhealthy',
+         'degree': 'b.tech',
+         'have-you-ever-had-suicidal-thoughts-?': 'yes',
+         'family-history-of-mental-illness': 'yes'}
+	- requests.post(url, json=person).json()
+```
+On command line
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "age": 60.0,
+    "academic-pressure": -1,
+    "work-pressure": 5,
+    "cgpa": -1,
+    "study-satisfaction": -1,
+    "job-satisfaction": 1,
+    "work-study-hours": 15.0,
+    "financial-stress": 5.0,
+    "gender": "male",
+    "city": "pune",
+    "working-professional-or-student": "working professional",
+    "profession": "teacher",
+    "sleep-duration": "less than 5 hours",
+    "dietary-habits": "unhealthy",
+    "degree": "b.tech",
+    "have-you-ever-had-suicidal-thoughts-?": "yes",
+    "family-history-of-mental-illness": "yes"
+
+}'  http://localhost:9696/predict
 ```
 
 
