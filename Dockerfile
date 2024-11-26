@@ -9,8 +9,10 @@ COPY ["Pipfile","Pipfile.lock", "./"]
 
 RUN pipenv install --system --deploy
 
-# Copy all the files from the 'depression_predictor' directory into the contai
-RUN ls -R /app/depression_predictor
+# Copy all the files from the 'depression_predictor' directory into the container
+COPY depression_predictor/ ./depression_predictor/
+
+
 
 # Expose port 9696 for the application
 EXPOSE 9696
