@@ -32,6 +32,8 @@ docker run -it --rm -p 5000:9696 depression_app
 Then, Use test.py as input to the service
 
 Run locally
+```bash
+git clone <repo>
 
 ```bash
 cd depression_predictor
