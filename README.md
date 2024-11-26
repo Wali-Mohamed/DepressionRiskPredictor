@@ -136,3 +136,16 @@ Secondary metrics like **accuracy, precision,** and **F1 Score** are less emphas
 ### Conclusion:
 **Recall** is paramount in our model to ensure no at-risk individual is missed, aligning with the high stakes of medical diagnostics and ethical standards of healthcare analytics.
 
+## Model Performance Report
+
+* Logistic Regression  (Validation Data): Recall 82.4%
+
+* Random Forest  (Validation Data): Recall 78.4%
+
+* XGBoost (Validation Data): Recall 83.34%
+
+  Trained the model again with training and validation data combined
+
+* XGBoost (Test Data): Recall 81.9%
+
+
