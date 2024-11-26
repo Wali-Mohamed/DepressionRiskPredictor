@@ -41,7 +41,7 @@ curl http://localhost:9696/predict
 Web Service
 
 ```
-Start service:  python predict_wine.py
+Start service:  python app.py
 In jupyter notebook, issue following statements:
 
 	- import requests
