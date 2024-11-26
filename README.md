@@ -38,33 +38,7 @@ cd depression_predictor
 python app.py
 curl http://localhost:9696/predict
 ```
-Web Service
 
-```
-Start service:  python app.py
-In jupyter notebook, issue following statements:
-
-	- import requests
-	- url = 'http://localhost:9696/predict'
-	- person ={'age': 60.0,
-         'academic-pressure': 5,
-         'work-pressure': -1,
-         'cgpa':5,
-         'study-satisfaction': 5,
-         'job-satisfaction': -1,
-         'work-study-hours': 15.0,
-         'financial-stress': 5.0,
-         'gender': 'male',
-         'city': 'pune',
-         'working-professional-or-student': 'student',
-         'profession': 'not-applicable',
-         'sleep-duration': 'less than 5 hours',
-         'dietary-habits': 'unhealthy',
-         'degree': 'b.tech',
-         'have-you-ever-had-suicidal-thoughts-?': 'yes',
-         'family-history-of-mental-illness': 'yes'}
-	- requests.post(url, json=person).json()
-```
 On command line
 
 ```bash
@@ -89,6 +63,8 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 }'  http://localhost:9696/predict
 ```
+
+### On cloud
 
 
 
