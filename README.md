@@ -29,7 +29,7 @@ docker build -t depression_app .
 docker run -it --rm -p 5000:9696 depression_app
 ```
 
-Then, Use test.py as input to the service
+
 
 ## Run locally
 ```bash
@@ -51,7 +51,7 @@ pipenv shell
 ```
 ```bash
 python app.py
-curl http://localhost:9696/predict
+
 ```
 
 ### Deactivate the environment
@@ -135,9 +135,20 @@ parent_directory/
 ├── Dockerfile  
 ├── Pipfile  
 └── Pipfile.lock  
+for training the model on command line 
 
+```
+cd depression_predictor
+python train.py 
 
+```
 
+For predicting using sample data
+
+```
+cd depression_predictor
+python predict.py
+```
 
 
 
