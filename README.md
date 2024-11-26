@@ -111,9 +111,16 @@ parent_directory/
 │   ├── templates/  
 ├── notebook.ipynb  
 ├── train.py  
-└── predict.py  
+├── predict.py  
+├── Dockerfile  
 ├── Pipfile  
 └── Pipfile.lock  
+
+
+
+
+
+
 
 
 
