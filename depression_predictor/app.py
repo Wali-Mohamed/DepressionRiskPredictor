@@ -8,9 +8,17 @@ import sqlite3
 import os
 
 app = Flask(__name__)
-output_file='best_xgboost.bin'
+
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, 'best_xgboost.bin')
+
+print(current_dir)
+print(model_path)
+
 # Load your pre-trained model
-with open(output_file, 'rb') as model_file:
+with open(model_path, 'rb') as model_file:
     dv, model = pickle.load(model_file)
 
 
@@ -53,13 +61,27 @@ def predict():
         dtest = xgb.DMatrix(X, feature_names=features)
         y_pred = model.predict(dtest)
         
-         # Make a prediction
-       
-        prediction=round(y_pred[0], 2)
-        prediction_result = f"The depression risk is: {prediction*100}%"
-        return render_template('index.html', prediction=prediction_result), 200
+        
+        # Make a prediction
+        prediction = round(y_pred[0], 2)
+        prediction_result = f"The depression risk is: {prediction * 100}%"
+
+        # If the request is JSON, return JSON response
+        if request.is_json:
+            return jsonify({"prediction": prediction_result}), 200
+        else:
+            # Otherwise, render the template with the result
+            return render_template('index.html', prediction=prediction_result), 200
+
     except Exception as e:
-        return f"Error making prediction: {e}", 500
+        if request.is_json:
+            return jsonify({"error": f"Error making prediction: {e}"}), 500
+        else:
+            return f"Error making prediction: {e}", 500
+
+
+        
+    
 
 
         

@@ -44,6 +44,7 @@
             <div class="form-group">
                 <label for="workingProfessionalOrStudent">Working Professional or Student:</label>
                 <select id="workingProfessionalOrStudent" name="working-professional-or-student">
+                    <option value="" disabled selected>Select an option</option>
                     <option value="working professional">Working Professional</option>
                     <option value="student">Student</option>
                 </select>
@@ -58,34 +59,33 @@
                     <option value="software engineer">Software Engineer</option>
                     <option value="data scientist">Data Scientist</option>
                     <option value="doctor">Doctor</option>
-                    <option value="unemployed">Unemployed</option>
                     <!-- Add other professions as needed -->
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="academicPressure">Academic Pressure (1-5):</label>
-                <input type="number" id="academicPressure" name="academic-pressure" min="1" max="5">
+                <input type="number" id="academicPressure" name="academic-pressure" min="-1" max="5">
             </div>
 
             <div class="form-group">
                 <label for="workPressure">Work Pressure (1-5):</label>
-                <input type="number" id="workPressure" name="work-pressure" min="1" max="5">
+                <input type="number" id="workPressure" name="work-pressure" min="-1" max="5">
             </div>
 
             <div class="form-group">
-                <label for="cgpa">CGPA:</label>
+                <label for="cgpa">CGPA(1-10):</label>
                 <input type="number" id="cgpa" name="cgpa" step="0.01">
             </div>
 
             <div class="form-group">
                 <label for="studySatisfaction">Study Satisfaction (1-5):</label>
-                <input type="number" id="studySatisfaction" name="study-satisfaction" min="1" max="5">
+                <input type="number" id="studySatisfaction" name="study-satisfaction" min="-1" max="5">
             </div>
 
             <div class="form-group">
                 <label for="jobSatisfaction">Job Satisfaction (1-5):</label>
-                <input type="number" id="jobSatisfaction" name="job-satisfaction" min="1" max="5">
+                <input type="number" id="jobSatisfaction" name="job-satisfaction" min="-1" max="5">
             </div>
 
             <div class="form-group">

@@ -1,16 +1,19 @@
+# Use Python slim image for smaller image size
 FROM python:3.11-slim
+
 
 WORKDIR /app
 
 RUN pip install pipenv
+COPY ["Pipfile","Pipfile.lock", "./"]
 
-COPY app/models models
-COPY ["Pipfile", "Pipfile.lock", "./"]
+RUN pipenv install --system --deploy
 
-RUN pipenv install --deploy --ignore-pipfile --system
+# Copy all the files from the 'depression_predictor' directory into the contai
+RUN ls -R /app/depression_predictor
 
-COPY depression_predictor .
+# Expose port 9696 for the application
+EXPOSE 9696
 
-EXPOSE 5000
-
-CMD gunicorn --bind 0.0.0.0:5000 app:app
+# Start the application using Gunicorn, ensuring the path is correct
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "depression_predictor.app:app"]

@@ -1,35 +1,40 @@
 /* script.js */
 
-document.getElementById("depressionForm").addEventListener("submit", function(event) {
-    let age = document.getElementById("age").value;
-    let professionField = document.getElementById("profession");
-        let studySatisfactionField = document.getElementById("studySatisfaction");
+document.getElementById("workingProfessionalOrStudent").addEventListener("change", function() {
+    let studySatisfactionField = document.getElementById("studySatisfaction");
+    let academicPressureField = document.getElementById("academicPressure");
     let cgpaField = document.getElementById("cgpa");
+    let professionField = document.getElementById("profession");
     let workPressureField = document.getElementById("workPressure");
     let jobSatisfactionField = document.getElementById("jobSatisfaction");
-
-    if (age < 18 || age > 60) {
-        alert("Please enter an age between 18 and 60.");
-        event.preventDefault();
-    }
-
-    if (document.getElementById("workingProfessionalOrStudent").value === "student") {
+    let workingStatus = this.value;
+  
+    if (workingStatus === "student") {
         professionField.value = "Not Applicable";
         professionField.disabled = true;
-        professionField.querySelector("option[value='Not Applicable']").selected = true; // Set the default value explicitly
         if (workPressureField) {
-            workPressureField.value = -1;
+            workPressureField.value = '-1';
         }
         if (jobSatisfactionField) {
-            jobSatisfactionField.value = -1;
+            jobSatisfactionField.value = '-1';
         }
-    } else {
+    } else if (workingStatus === "working professional") {
         professionField.disabled = false;
+        professionField.value = ""; // Reset value if user changes to working professional
+        if (workPressureField) {
+            workPressureField.value = "";
+        }
+        if (jobSatisfactionField) {
+            jobSatisfactionField.value = "";
+        }
         if (studySatisfactionField) {
-            studySatisfactionField.value = -1;
+            studySatisfactionField.value = '-1';
+        }
+        if (academicPressureField) {
+            academicPressureField.value = '-1';
         }
         if (cgpaField) {
-            cgpaField.value = -1;
+            cgpaField.value = '-1';
         }
     }
 });
