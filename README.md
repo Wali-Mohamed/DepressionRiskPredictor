@@ -95,7 +95,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 ### On cloud
 
-[Depression Risk Predictor](http://3.10.221.130)
+[Depression Risk Predictor](http://3.10.221.130:5000)
 
 
 
