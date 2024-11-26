@@ -163,11 +163,13 @@ Secondary metrics like **accuracy, precision,** and **F1 Score** are less emphas
 ## Model Performance Report
 
 * Logistic Regression  (Validation Data): Recall 82.4%
+* ![Alt text](/plots/cond_recall.png)
+
 
 * Random Forest  (Validation Data): Recall 78.4%
-
+![Alt text](/plots/randomforest.png)
 * XGBoost (Validation Data): Recall 83.34%
-
+![Alt text](/plots/xgb_eta.png)
   Trained the model again with training and validation data combined
 
 * XGBoost (Test Data): Recall 81.9%
