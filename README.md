@@ -117,6 +117,20 @@ curl -X POST -H "Content-Type: application/json" -d '{
 The app has been deployed on **AWS EC2**
 [Depression Risk Predictor](http://3.10.221.130:5000)
 
+for training the model on command line 
+
+```
+
+python train.py 
+
+```
+
+For predicting using sample data
+
+```
+
+python predict.py
+```
 
 ## Project File Structure
 
@@ -135,20 +149,7 @@ parent_directory/
 ├── Dockerfile  
 ├── Pipfile  
 └── Pipfile.lock  
-for training the model on command line 
 
-```
-cd depression_predictor
-python train.py 
-
-```
-
-For predicting using sample data
-
-```
-cd depression_predictor
-python predict.py
-```
 
 
 
