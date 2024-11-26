@@ -46,14 +46,17 @@ pipenv install
 ```bash
 pipenv shell
 ```
+
+### Run the Application
+```
+```bash
+python app.py
+curl http://localhost:9696/predict
+```
+
 ### Deactivate the environment
 ```bash
 exit
-```
-```bash
-cd depression_predictor
-python app.py
-curl http://localhost:9696/predict
 ```
 * Web Service
 
