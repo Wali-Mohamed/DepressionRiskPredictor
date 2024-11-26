@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Depression Risk Prediction</h1>
+        <form id="depressionForm" action="/predict" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="60" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <option value="ludhiana">Ludhiana</option>
+                    <option value="varanasi">Varanasi</option>
+                    <option value="visakhapatnam">Visakhapatnam</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="kanpur">Kanpur</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="thane">Thane</option>
+                    <option value="nashik">Nashik</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="patna">Patna</option>
+                    <!-- Add other cities as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="workingProfessionalOrStudent">Working Professional or Student:</label>
+                <select id="workingProfessionalOrStudent" name="working-professional-or-student">
+                    <option value="working professional">Working Professional</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <select id="profession" name="profession">
+                    <option value="chef">Chef</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="business analyst">Business Analyst</option>
+                    <option value="software engineer">Software Engineer</option>
+                    <option value="data scientist">Data Scientist</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="unemployed">Unemployed</option>
+                    <!-- Add other professions as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="academicPressure">Academic Pressure (1-5):</label>
+                <input type="number" id="academicPressure" name="academic-pressure" min="1" max="5">
+            </div>
+
+            <div class="form-group">
+                <label for="workPressure">Work Pressure (1-5):</label>
+                <input type="number" id="workPressure" name="work-pressure" min="1" max="5">
+            </div>
+
+            <div class="form-group">
+                <label for="cgpa">CGPA:</label>
+                <input type="number" id="cgpa" name="cgpa" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="studySatisfaction">Study Satisfaction (1-5):</label>
+                <input type="number" id="studySatisfaction" name="study-satisfaction" min="1" max="5">
+            </div>
+
+            <div class="form-group">
+                <label for="jobSatisfaction">Job Satisfaction (1-5):</label>
+                <input type="number" id="jobSatisfaction" name="job-satisfaction" min="1" max="5">
+            </div>
+
+            <div class="form-group">
+                <label for="sleepDuration">Sleep Duration:</label>
+                <select id="sleepDuration" name="sleep-duration">
+                    <option value="less than 5 hours">Less than 5 hours</option>
+                    <option value="5-6 hours">5-6 hours</option>
+                    <option value="7-8 hours">7-8 hours</option>
+                    <option value="more than 8 hours">More than 8 hours</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaryHabits">Dietary Habits:</label>
+                <select id="dietaryHabits" name="dietary-habits">
+                    <option value="healthy">Healthy</option>
+                    <option value="unhealthy">Unhealthy</option>
+                    <option value="moderate">Moderate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="degree">Degree:</label>
+                <select id="degree" name="degree">
+                    <option value="b.tech">B.Tech</option>
+                    <option value="m.tech">M.Tech</option>
+                    <option value="mba">MBA</option>
+                    <option value="phd">PhD</option>
+                    <!-- Add other degrees as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="suicidalThoughts">Have you ever had suicidal thoughts?:</label>
+                <select id="suicidalThoughts" name="have-you-ever-had-suicidal-thoughts-?">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="workStudyHours">Work-Study Hours:</label>
+                <input type="number" id="workStudyHours" name="work-study-hours" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="financialStress">Financial Stress (1-5):</label>
+                <input type="number" id="financialStress" name="financial-stress" min="1" max="5">
+            </div>
+
+            <div class="form-group">
+                <label for="familyHistory">Family History of Mental Illness:</label>
+                <select id="familyHistory" name="family-history-of-mental-illness">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict Risk</button>
+        </form>
+        <div id="prediction-result">{{ prediction }}</div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

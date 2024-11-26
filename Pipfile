@@ -10,8 +10,9 @@ pandas = "*"
 seaborn = "*"
 tqdm = "*"
 xgboost = "*"
-flask = "*"
 squarify = "*"
+statsmodels = "*"
+flask = "*"
 
 [dev-packages]
 
