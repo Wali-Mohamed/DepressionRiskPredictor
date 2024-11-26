@@ -41,12 +41,12 @@ curl http://localhost:9696/predict
 * Web Service
 
 ```
-Start service:  python predict_wine.py
+Start service:  python app.py
 In jupyter notebook, issue following statements:
 
-	- import requests
-	- url = 'http://localhost:9696/predict'
-	- person ={
+- import requests
+- url = 'http://localhost:9696/predict'
+- person ={
     "age": 6.0,
     "academic-pressure": -1,
     "work-pressure": 5,
